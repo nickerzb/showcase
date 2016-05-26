@@ -1,2 +1,9 @@
-h1 Hello World
+h1 Welcome to BookBottles!
+form.validate.form-group(id="form")
+    div.input-group
+        input.form-control(type="text", id="username", placeholder="Username", ng-model="username", required)
+    div.input-group
+        input.form-control(type="text", id="password", placeholder="Password", ng-model="password", required)
+div
+    button.btn.btn-default(ng-click='vm.login(username, password)') Login
 a(ui-sref="signup") Sign Up

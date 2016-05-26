@@ -10,6 +10,7 @@ function route($stateProvider) {
     $stateProvider
         .state('home', {
             url: '/',
-            template: require('./templates/home.tpl.jade')
+            template: require('./templates/home.tpl.jade'),
+            controller: 'LoginCtrl as vm'
         });
 }

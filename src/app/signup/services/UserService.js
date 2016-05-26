@@ -14,8 +14,20 @@ function UserService() {
 
     //////////
 
-    function create() {
-        console.debug('Creating a user');
+    function create(username, password, confirmPassword) {
+        //Verify Form
+        if(password === confirmPassword 
+        			&& !!password 
+    				&& !!confirmPassword){
+        	validUser(username);
+        }else{
+        	alert('Passwords must match and have a length.  Username must be Bookbottles... You\'ll know the password!');
+        }
+    }
+
+    function validUser(username){
+    	$cookies.put('username', username);
+        $cookies.put('loggedIn', true);
     }
 }
 

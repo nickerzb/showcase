@@ -6,7 +6,10 @@ require('angular')
         require('angular-ui-router'),
 
         /* Custom */
-        require('../signup')
+        require('../signup'),
+        'ngCookies'
     ])
     .config(require('./config'))
-    .config(require('./route'));
+    .config(require('./route'))
+    .controller('LoginCtrl', require('./controllers/LoginCtrl'))
+    .factory('LoginService',  require('./services/LoginService'));
